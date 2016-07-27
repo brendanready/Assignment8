@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 2 - Calculator III</title>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+
+<body>
+	<input type="text" readonly id="result">
+    <br>
+    <div id="container">
+        <input type="button" id="seven" value="7">
+        <input type="button" id="eight" value="8">
+        <input type="button" id="nine" value="9">
+        <input type="button" id="divide" value="/">
+        <br>
+        <input type="button" id="four" value="4">
+        <input type="button" id="five" value="5">
+        <input type="button" id="six" value="6">
+        <input type="button" id="multiply" value="*">
+        <br>
+        <input type="button" id="one" value="1">
+        <input type="button" id="two" value="2">
+        <input type="button" id="three" value="3">
+        <input type="button" id="subtract" value="-">
+        <br>
+        <input type="button" id="zero" value="0">
+        <input type="button" id="period" value=".">
+        <input type="button" id="add" value="+">
+    </div>
+    <input type="button" id="equal" value="=">
+    
+    <script>
+// STEP 1. Notice the markup that I’ve included for you in the web page. There is a text box that will display the value of each button click and 16 different buttons each of which represents a major key on a basic calculator. Begin by referencing the jQuery library and then immediately wire up the jQuery .ready() function. 
+        
+// STEP 2. This first part will require you to stylize all of the buttons programmatically. Using jQuery make each button the same width and height, give each button a unique background color, border style, width and color. Also, give the display a unique background color, set the font color and size, and set a unique border style, width, and color. 
+        
+// STEP 3. Reference the “bubble capture” code from assignment 5. Rewrite this code so that it uses jQuery events and makes use of jQuery DOM manipulation techniques to set the display based on button selections made.
+        
+        $(document).ready(function() { 
+            $("input:button").width("50px").height("20px").css({
+                "background-color": "deepskyblue",
+                "border": "1px solid black",
+                "margin": "2px"});
+            
+            $("input:text").width("288px").height("30px").css({
+                "background-color": "ghostwhite",
+                "border": "1px solid darkblue",
+                "color": "black",
+                "font-size": "1.5em",
+                "padding-left": "5px"});
+            
+            $("#add").css("color","red");
+            $("#subtract").css("color","red");
+            $("#multiply").css("color","red");
+            $("#divide").css("color","red");
+            $("#equal").css("color","white");
+    
+            $("#container").on("click", function createString(event) {
+                var getField = $("#result").val();
+                
+                if (getField === "") {
+                   $("#result").val(event.target.value); 
+                } else if (getField !== "") {
+                    var newNum = getField + event.target.value;
+                    $("#result").val(newNum);
+                };
+            });
+            
+            $("#equal").on("click", function(event) {     
+                var calculationString = $("#result").val();
+                $("#result").val(eval(calculationString));
+            });
+            
+            $("div").click(function (event) {
+                  var target = $(event.target);
+                  if       (target.is($("#seven"))) {
+                    $("#seven").css("color","yellow");
+                  }else if (target.is($("#eight"))) {
+                    $("#eight").css("color","yellow");
+                  }else if (target.is($("#nine"))) {
+                    $("#nine").css("color","yellow");
+                  }else if (target.is($("#divide"))) {
+                    $("#divide").css("color","yellow");
+                  }else if (target.is($("#four"))) {
+                    $("#four").css("color","yellow");
+                  }else if (target.is($("#five"))) {
+                    $("#five").css("color","yellow");
+                  }else if (target.is($("#six"))) {
+                    $("#six").css("color","yellow");
+                  }else if (target.is($("#multiply"))) {
+                    $("#multiply").css("color","yellow");
+                  }else if (target.is($("#one"))) {
+                    $("#one").css("color","yellow");
+                  }else if (target.is($("#two"))) {
+                    $("#two").css("color","yellow"  );
+                  }else if (target.is($("#three"))) {
+                    $("#three").css("color","yellow");
+                  }else if (target.is($("#subtract"))) {
+                    $("#subtract").css("color","yellow");
+                  }else if (target.is($("#zero"))) {
+                    $("#zero").css("color","yellow");
+                  }else if (target.is($("#period"))) {
+                    $("#period").css("color","yellow");
+                  }else if (target.is($("#add"))) {
+                    $("#add").css("color","yellow");
+                  }else if (target.is($("#equal"))) {
+                    $("#nine").css("color","yellow");
+                  }   
+            });
+            
+        });
+    </script>
+</body>
+</html>

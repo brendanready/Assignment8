@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Assignment 8 - Part 2: Tabbed Menu Bar</title>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <style>
+            * {margin: 0; padding: 0;}
+            body {background-color: #DBDBDB;}
+            main {margin: 0px auto; width: 960px; height: 500px; background-color: black; padding: 20px;}
+            h2 {text-align: center; color: black; padding: 5px; text-decoration: underline;}
+            div {border: solid 1px black; background-color: white; height: 300px;}
+            nav {list-style-type: none;}
+            ul {padding-left: 20px; background: rgb(76,76,76); /* Old browsers */
+                background: -moz-linear-gradient(top,  rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */; margin: 10px; border-radius: 5px;}
+            li {list-style-type: none; display: inline-block; padding: 7px;
+                background: rgb(255,255,255); /* Old browsers */
+                background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 51%, rgba(246,246,246,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */; margin: 10px 5px 0 0; margin-bottom: 0; border-radius: 1px;}
+            section {margin: 10px;}
+            h4 {margin-bottom: 10px;}
+            .white {background: white; font-weight: bold;}
+        </style>
+    </head>
+
+    <body>
+        <h2 class="header">Tabbed Menu Bar</h2>
+        <main>
+           <div>
+                <nav>
+                    <ul>
+                        <li>Mammals Tab</li>
+                        <li>Birds Tab</li>
+                        <li>Reptiles Tab</li>
+                    </ul>
+                </nav>
+                <section>
+                    <section id="outcomes">
+                        <h4>Mammals</h4>
+                    Lorem ipsum dolor sit amet, cum evertitur neglegentur id. Sit decore tamquam liberavisse at, eu vis dicta aeterno lucilius. Imperdiet euripidis te vim, ne dicant inimicus per, et imperdiet dignissim pro. Est at probo justo adipiscing, an ius possim impetus virtute, mea no novum animal. Affert graeci ne pri, ei ridens quodsi patrioque vis, vis id illud liber consequat. Copiosae ponderum electram et vel, ut facete efficiantur eam. Rebum urbanitas id sea, rebum altera cotidieque et ius. Ius in nulla euripidis. Eos te elit legendos intellegebat, cu admodum nominati comprehensam vis.Qui ut iracundia voluptatibus, vix iudico phaedrum in, mea quem eirmod impetus eu. Ne nobis quaeque veritus eam. Vel accusam quaerendum theophrastus et, nostrum verterem mei et, sea tantas dolore no. Utinam aperiri mea ex, viderer interpretaris usu ei, hinc necessitatibus cum in. Ius ludus libris ne, mei et probatus antiopam voluptatum. Volutpat mediocritatem ex quo, no alterum fastidii reprimique ius, id erat dolor definitiones nam.</section>
+                    <section id="modules">
+                        <h4>Birds</h4>
+                    Partem intellegat ex per, eius nobis scriptorem sea te. Vix eu repudiare consectetuer, at has quem errem. His ea sanctus platonem definitionem, sed scripta aperiri lucilius ut. Vis iriure convenire ex, at cum ignota graecis quaestio, tota omnis aperiri vix et. Cu mea eius epicuri appellantur, an nonumy tractatos moderatius nec. Eos ut nullam habemus. Clita scribentur mel ne. Simul melius aperiam et mel. Per equidem referrentur ne, ne mazim nonumes per. Mazim dictas timeam vix at, duo esse perpetua cotidieque ad, quo ei case vidisse. Probatus contentiones in pri. Duo paulo dolore efficiendi te. Postea eripuit philosophia ut quo, his ex saepe possit graeco, accusata sapientem eum ad.</section>
+                    <section id="bio">
+                        <h4>Reptiles</h4>
+                    Duo enim possim ne, has ut quot corpora splendide, usu brute nonumy neglegentur cu. Nam ea case omnis philosophia, usu tale placerat an. Suscipit pertinax persecuti pri et, in vim tota vidisse dissentiet, in unum salutandi vim. Vis id dicunt rationibus reformidans, est ex justo tempor. Minim denique ea mea, ei euismod ponderum consectetuer vis. Per omnes melius voluptatibus id, id graece volutpat mel. Mel ei graeci debitis, sed saperet pericula rationibus eu. Et eum ponderum invidunt expetenda, an meis graeco persequeris qui, iusto pertinax eu his. Vis ea graeco scripserit. Est eruditi invenire te, veritus alienum placerat eos ei.  Melius imperdiet consetetur id duo, nulla audire ius ad, usu eu nulla theophrastus. Per ea eros alienum. Aeque hendrerit ad pro. Ad mel animal nonumes senserit, id nam lorem accommodare definitiones, sit purto evertitur reformidans ex.</section>
+                </section>
+            </div>
+        </main>
+        
+        <script>
+        $(document).ready(function() {
+            $("#modules").hide();
+            $("#bio").hide();
+            $("li:first-child").addClass("white");
+            
+            $("li:first-child").on("click", function() {
+                $("li:first-child").addClass("white");
+                $("li:not(:first-child)").removeClass("white");
+                $("#outcomes").show();
+                $("#modules").hide();
+                $("#bio").hide();
+                
+            });
+            
+            $("li:nth-child(2)").on("click", function() {
+                $("li:nth-child(2)").addClass("white");
+                $("li:not(:nth-child(2))").removeClass("white");
+                $("#outcomes").hide();
+                $("#modules").show();
+                $("#bio").hide();
+            });
+            
+            $("li:last-child").on("click", function() {
+                $("li:last-child").addClass("white");
+                $("li:not(:last-child)").removeClass("white");
+                $("#outcomes").hide();
+                $("#modules").hide();
+                $("#bio").show();
+            });
+        });
+        </script>
+    </body>
+</html>
